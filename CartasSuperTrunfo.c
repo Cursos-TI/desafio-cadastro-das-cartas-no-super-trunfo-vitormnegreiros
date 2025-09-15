@@ -82,23 +82,17 @@ int main() {
 
     
     printf("\nEscolha o SEGUNDO atributo (diferente do primeiro):\n");
-    for (int i = 1; i <= 6; i++) {
-        if (i == escolha1) continue; 
-        switch (i) {
-            case 1: printf("1 - População\n"); break;
-            case 2: printf("2 - Área\n"); break;
-            case 3: printf("3 - PIB\n"); break;
-            case 4: printf("4 - Pontos Turísticos\n"); break;
-            case 5: printf("5 - Densidade Demográfica\n"); break;
-            case 6: printf("6 - PIB per capita\n"); break;
-        }
-    }
+    if (escolha1 != 1) printf("1 - População\n");
+    if (escolha1 != 2) printf("2 - Área\n");
+    if (escolha1 != 3) printf("3 - PIB\n");
+    if (escolha1 != 4) printf("4 - Pontos Turísticos\n");
+    if (escolha1 != 5) printf("5 - Densidade Demográfica\n");
+    if (escolha1 != 6) printf("6 - PIB per capita\n");
     scanf("%d", &escolha2);
 
     
     float valorA1, valorB1, valorA2, valorB2;
 
-    
     switch (escolha1) {
         case 1: valorA1 = populacaoA; valorB1 = populacaoB; break;
         case 2: valorA1 = areaA; valorB1 = areaB; break;
@@ -109,7 +103,6 @@ int main() {
         default: printf("Atributo inválido!\n"); return 1;
     }
 
-    
     switch (escolha2) {
         case 1: valorA2 = populacaoA; valorB2 = populacaoB; break;
         case 2: valorA2 = areaA; valorB2 = areaB; break;
